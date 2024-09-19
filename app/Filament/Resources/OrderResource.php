@@ -72,10 +72,7 @@ class OrderResource extends Resource
                         '2' => 'danger',
                         default => 'gray',
                     })
-
             ])
-
-//        ['customer_id', 'name', 'address', 'status', 'remark'];
             ->filters([
                 //
             ])
