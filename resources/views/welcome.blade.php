@@ -24,9 +24,9 @@
     <div class="drawer-content">
         <!-- Nav Start -->
         <nav class="navbar bg-primary sticky top-0 z-50">
-            <div class="container mx-auto">
+            <div class="container mx-auto flex align-center justify-between">
                 <!-- Navbar Start -->
-                <div class="flex-1">
+                <div class="flex justify-between">
                     <img class="w-10 h-10 mr-3" src="{{ asset('image/logo1.jpg') }}" alt="LogoImage">
                     <a class="btn btn-ghost normal-case text-xl text-white" href="#home">003 Cleaning</a>
                 </div>
@@ -43,7 +43,7 @@
                     </ul>
                 </div>
                 <!-- Navbar End -->
-                <div class="flex-none">
+                <div class="flex items-center">
                     <!-- Dark Mode Toggle -->
                     <div class="form-control mr-4">
                         <label class="cursor-pointer label">
@@ -140,7 +140,7 @@
                             <h5 class="card-title">Deep Cleaning</h5>
                             <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <!-- Modal Trigger -->
-                            <label for="serviceModal" class="btn btn-primary">Get Service</label>
+                            <label for="serviceModal" class="btn btn-primary">Order Now</label>
                         </div>
                     </div>
                     <!-- Repeat similar cards for other services -->
@@ -155,7 +155,8 @@
             <div class="modal-box relative">
                 <label for="serviceModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                 <h3 class="text-lg font-bold">Making Order</h3>
-                <form method="post" class="mt-4">
+                <form action="{{route('order.store')}}" method="post" class="mt-4">
+                    @csrf
                     <div class="form-control">
                         <label class="label" for="name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="Your name..." class="input input-bordered" />
@@ -174,7 +175,7 @@
                     </div>
                     <div class="form-control mt-4">
                         <label class="label" for="message">Message:</label>
-                        <textarea name="message" id="message" placeholder="Your message..." class="textarea textarea-bordered"></textarea>
+                        <textarea name="remark" id="message" placeholder="Your message..." class="textarea textarea-bordered"></textarea>
                     </div>
                     <div class="modal-action mt-4">
                         <label for="serviceModal" class="btn">Close</label>
