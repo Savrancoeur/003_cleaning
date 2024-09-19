@@ -1,55 +1,95 @@
-/* Global Styles */
-* {
+*{
     font-family: serif;
 }
-body {
+body{
     height: 400vh;
     scroll-behavior: smooth;
 }
 
-/* Navbar Styles */
-.navbar .btn-ghost {
-    /* Ensures the brand name stands out */
-    font-weight: bold;
+/*Nav Start  */
+.logoImg{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: white;
 }
+.nav-item a {
+    color: black;
+    transition: 0.5s;
+}
+.nav-item a:hover{
+    background:  linear-gradient( 220deg, #3572EF ,#3ABEF9);
+    color: white;
+    transform: scale(0.9);
+}
+/* .userProfile{
+    width: 300px !important
 
-/* Header Styles */
-.header-container {
+} */
+.userProfileBtn{
+    width: 50px;
+    height: 50px;
+    border-radius:30%;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.userProfileBtn:hover{
+    transform: scale(0.9);
+    background:  linear-gradient( 220deg, #3572EF ,#3ABEF9);
+}
+.switchDark{
+    cursor: pointer;
+}
+/* Nav End */
+
+/* Header Start */
+.header-container{
     height: 90vh;
 }
-.headerImage {
+.headerImage{
     height: 450px;
     object-fit: cover;
     width: 85%;
 }
-.headTitle {
-    transition: all 0.4s ease-in-out;
-    background: linear-gradient(220deg, #3572EF, #3ABEF9);
+.headTitle{
+    transition:all  0.4s ease-in-out;
+    background:  linear-gradient( 220deg, #3572EF ,#3ABEF9);
     width: 200px;
 }
-.headTitle:hover {
+.headTitle:hover{
     transform: scale(0.9);
-}
 
-/* Service Card Styles */
-.serviceCard {
+}
+/* Header End */
+
+/* Service Start */
+.serviceCard{
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
-.serviceCard:hover {
+.serviceCard:hover{
     transform: scale(1.1);
     box-shadow: 0 0 7px 0 gray;
 }
+/* Service End */
 
-/* User Info Styles */
-.infoImage {
+/* User Info start */
+.infoImage{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(220deg, #3572EF, #3ABEF9);
+    background:  linear-gradient( 220deg, #3572EF ,#3ABEF9);
 }
+/* User Info End */
 
-/* Scroll Up Button Styles */
+/* Login Start */
+.loginIcon{
+    font-size: 120px;
+}
+/* Login End */
+
+/* Scroll up Start */
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -68,30 +108,8 @@ body {
 }
 
 #myBtn:hover {
-    background: linear-gradient(220deg, #3572EF, #3ABEF9); /* Add a gradient background on hover */
+    background:  linear-gradient( 220deg, #3572EF ,#3ABEF9); /* Add a dark-grey background on hover */
     transform: translate(0px, -20px);
 }
 
-/* Preloader Styles */
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
-
-/* Spinner Animation */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    /* Adjust header image on smaller screens */
-    .headerImage {
-        height: 300px;
-    }
-}
+/* Scroll Up End */

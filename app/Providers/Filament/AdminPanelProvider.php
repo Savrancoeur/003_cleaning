@@ -30,6 +30,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->spa()
+            ->passwordReset()
+            ->authPasswordBroker('users')
             ->maxContentWidth(MaxWidth::Full)
             ->topNavigation(true)
             ->defaultThemeMode(ThemeMode::Light)

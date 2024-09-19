@@ -34,7 +34,12 @@
                 <div class="hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
                         <li><a href="#home" class="bg-base-100 text-primary">Home</a></li>
-                        <li><a href="#services" class="bg-base-100 text-primary">Services</a></li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            @if(auth()->user())
+                                <li><button type="submit" class="bg-base-100 text-primary">Logout</button></li>
+                            @endif
+                        </form>
                     </ul>
                 </div>
                 <!-- Navbar End -->
@@ -49,7 +54,7 @@
                     <!-- Login Button -->
                     <ul class="menu menu-horizontal px-1">
                         <li>
-                            <a href="" class="text-white">
+                            <a href="{{ route('login') }}" class="text-white">
                                 <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i>Login
                             </a>
                         </li>
