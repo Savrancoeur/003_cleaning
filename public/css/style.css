@@ -1,0 +1,97 @@
+/* Global Styles */
+* {
+    font-family: serif;
+}
+body {
+    height: 400vh;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar .btn-ghost {
+    /* Ensures the brand name stands out */
+    font-weight: bold;
+}
+
+/* Header Styles */
+.header-container {
+    height: 90vh;
+}
+.headerImage {
+    height: 450px;
+    object-fit: cover;
+    width: 85%;
+}
+.headTitle {
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(220deg, #3572EF, #3ABEF9);
+    width: 200px;
+}
+.headTitle:hover {
+    transform: scale(0.9);
+}
+
+/* Service Card Styles */
+.serviceCard {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.serviceCard:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 7px 0 gray;
+}
+
+/* User Info Styles */
+.infoImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(220deg, #3572EF, #3ABEF9);
+}
+
+/* Scroll Up Button Styles */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 25px; /* Place the button at the bottom of the page */
+    right: 25px; /* Place the button 25px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 25px; /* Increase font size */
+    transition: 0.5s;
+}
+
+#myBtn:hover {
+    background: linear-gradient(220deg, #3572EF, #3ABEF9); /* Add a gradient background on hover */
+    transform: translate(0px, -20px);
+}
+
+/* Preloader Styles */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    /* Adjust header image on smaller screens */
+    .headerImage {
+        height: 300px;
+    }
+}
