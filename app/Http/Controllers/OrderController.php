@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\User;
+use App\Notifications\NewOrderNotification;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -21,6 +23,11 @@ class OrderController extends Controller
             'customer_id'=>Auth()->user()->id
         ]);
 
-        return to_route('home');
+        $admins = User::all();
+        foreach ($admins as $admin) {
+            $admin->notify(new NewOrderNotification($order));
+        }
+
+        return to_route('home')->with('success', 'Order created successfully!');
     }
 }
